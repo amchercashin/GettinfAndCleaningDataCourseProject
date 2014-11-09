@@ -46,4 +46,4 @@ In general it
 
 While exctarting mean and standart deviation values, is tooks only variables with "mean()" and "std()" strings in names, dropping others. Also dropping additional variables with "Mean" in the name (like "gravityMean") because this variables do not contain means of the measurments.
 
-Information about variables could be found in the CODEBOOK.md
+Information about variables could be found in the CodeBook.md
