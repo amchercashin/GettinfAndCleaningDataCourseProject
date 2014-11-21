@@ -19,9 +19,9 @@ Check "./UCI HAR Dataset/README.txt" for the info about dataset.
 
 Variable names in processed data is taken from raw data set: "./UCI HAR Dataset/features.txt". They desribed at "./UCI HAR Dataset/features_info.txt".
 
-In the original war dataset the data is splited in 2 parts: train and test.
+In the original dataset the data is splited in 2 parts: train and test.
 
-For the purpose of cours project we uses only data in files:
+For the purpose of course project we use only data in files:
 
   * "./UCI HAR Dataset/train/X_train.txt" - measurments of train data part
   * "./UCI HAR Dataset/test/X_test.txt" - measurments of test data part
@@ -33,17 +33,17 @@ For the purpose of cours project we uses only data in files:
   * "./UCI HAR Dataset/features.txt" - variable names (wich will aggregate later)
 
 ## Achieving the goal
-All the work is done by R script: "run_analysis.R". See comments at the code for details. 
+All the work is done by R script: "run_analysis.R". See comments in the code for details. 
 
 In general it 
  1. combines train and test data part into one
  2. drops all but mean and std values
  3. adds variable names from features.txt
  4. adds subjects ids
- 5. substitute activity ids with readable labels
+ 5. substitute activity ids with readable labels from activity_labels.txt
  6. melts data into narrow data form and casts back to wide form with mean() aggregation by activities and subjects.
  7. writes the result to tidyData.txt with write.table() and default sep=" ".
 
-While exctarting mean and standart deviation values, is tooks only variables with "mean()" and "std()" strings in names, dropping others. Also dropping additional variables with "Mean" in the name (like "gravityMean") because this variables do not contain means of the measurments.
+While extracting mean and standart deviation values, is tooks only variables with "mean()" and "std()" strings in the names, dropping others. Also dropping additional variables with "Mean" in the name (like "gravityMean") because this variables do not contain means of the measurments.
 
 Information about variables could be found in the CodeBook.md
