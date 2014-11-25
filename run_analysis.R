@@ -52,4 +52,4 @@ tidyData<-dcast(tidyData, Activity+Subjects ~ variable,mean)
 
 #Adding 'MEAN_' prefix to column names with variables to mark the fact we mean them
 colnames(tidyData)[3:68]<-sapply(colnames(tidyData[,3:68]), function(c) paste("MEAN_",c, sep=""))
-write.table(tidyData,"./tidyData.txt")
+write.table(tidyData,"./tidyData.txt", row.names = FALSE)

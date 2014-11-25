@@ -15,6 +15,6 @@ The detailed description of original variables you can find at "./UCI HAR Datase
 
 tidyData.txt was written with write.table() function with default sep=" " and row.names=FALSE.
 To load it please use 
-`tidyData <- read.table(tidyData.txt, header=TRUE)`. 
+`tidyData <- read.table("tidyData.txt", header=TRUE)`. 
 
 While loading tidyData.txt in to R some symbols: "-", "(", ")" in variable names could be replaces with dots: ".". So the the variables named like "MEAN_tGravityAcc-std()-Z" could be presented to you like: "MEAN_tGravityAcc.std...Z"
